@@ -1,12 +1,11 @@
 import React from "react";
 
-export const Progresscomponent = props => {
-  // const { currentIndex, totalImages } = props;
+export const ProgressComponent = props => {
+  const { currentIndex, totalImages } = props;
   return (
-    <div>
+    <div className="progress-component">
       <p>
-        You are viewing {props.currentIndex} of {props.totalImages} German
-        Shepherds
+        You are viewing {currentIndex} of {totalImages} German Shepherds
       </p>
     </div>
   );

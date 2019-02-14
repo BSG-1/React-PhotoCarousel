@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { imagesArray } from "./data/images";
 import { ImageComponent } from "./components/imageComponent";
 import { ProgressComponent } from "./components/ProgressComponent";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -12,7 +13,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ImageComponent imageUrl={imagesArray[this.state.currentImage]} />
+        <ImageComponent
+          classname="image-component"
+          imageUrl={imagesArray[this.state.currentImage]}
+        />
         <ProgressComponent
           currentIndex={this.state.currentImage + 1}
           totalImages={this.state.imagesArray.length}
